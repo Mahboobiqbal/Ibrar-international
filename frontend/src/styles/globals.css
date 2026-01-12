@@ -1,0 +1,57 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 bg-secondary text-dark rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 hover:shadow-lg;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300;
+  }
+
+  .section-title {
+    @apply text-4xl font-bold text-dark mb-4 relative inline-block;
+  }
+
+  .section-title::after {
+    @apply absolute bottom-0 left-0 w-20 h-1 bg-secondary;
+    content: '';
+  }
+
+  .card-product {
+    @apply bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-secondary;
+  }
+
+  .card-service {
+    @apply bg-light rounded-lg p-6 text-center hover:bg-primary hover:text-white transition-all duration-300 shadow-md hover:shadow-lg;
+  }
+
+  .gold-accent {
+    @apply text-secondary;
+  }
+
+  .purple-accent {
+    @apply text-primary;
+  }
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-300;
+}

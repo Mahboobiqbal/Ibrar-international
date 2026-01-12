@@ -1,0 +1,62 @@
+{
+  "rice": [
+    {
+      "id": 1,
+      "name": "Basmati Rice",
+      "description": "Premium long-grain basmati rice with exceptional aroma and taste",
+      "details": "High-quality basmati rice sourced from the best farms. Perfect for biryanis, pilafs, and everyday cooking.",
+      "image": "/images/basmati-rice.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Sella Rice",
+      "description": "Parboiled sella rice with golden hue and unique cooking properties",
+      "details": "Traditionally processed sella rice that maintains texture during cooking. Ideal for fried rice and risotto.",
+      "image": "/images/sella-rice.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Brown Rice",
+      "description": "Nutrient-rich brown rice with wholesome flavor",
+      "details": "Unpolished rice retaining all bran and germ layers. High in fiber and essential nutrients.",
+      "image": "/images/brown-rice.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Long Grain Rice",
+      "description": "Extra-long grain white rice with perfect cooking consistency",
+      "details": "Premium long-grain rice with superior quality. Non-sticky and fluffy texture.",
+      "image": "/images/long-grain-rice.jpg"
+    }
+  ],
+  "marbles": [
+    {
+      "id": 1,
+      "name": "White Marble",
+      "description": "Pure white marble with elegant veining patterns",
+      "details": "Premium white marble sourced from renowned quarries. Perfect for luxury interiors and architectural projects.",
+      "image": "/images/white-marble.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Italian Marble",
+      "description": "Authentic Italian marble with distinctive character",
+      "details": "Imported Italian marble known for durability and timeless beauty. Ideal for premium construction and design.",
+      "image": "/images/italian-marble.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Granite",
+      "description": "Durable granite with rich color variations",
+      "details": "High-quality granite resistant to scratching and heat. Available in various colors and finishes.",
+      "image": "/images/granite.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Onyx Marble",
+      "description": "Luxurious onyx marble with translucent quality",
+      "details": "Premium onyx marble with unique light-transmitting properties. Creates stunning visual effects in design.",
+      "image": "/images/onyx-marble.jpg"
+    }
+  ]
+}

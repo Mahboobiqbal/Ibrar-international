@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "name": "Export & Supply",
+    "description": "Global export and supply chain management for premium products",
+    "icon": "🌍"
+  },
+  {
+    "id": 2,
+    "name": "Custom Packaging",
+    "description": "Tailored packaging solutions to meet specific client requirements",
+    "icon": "📦"
+  },
+  {
+    "id": 3,
+    "name": "Quality Inspection",
+    "description": "Rigorous quality control and inspection standards",
+    "icon": "✓"
+  },
+  {
+    "id": 4,
+    "name": "Marble Cutting & Finishing",
+    "description": "Expert marble cutting, polishing, and finishing services",
+    "icon": "🔨"
+  },
+  {
+    "id": 5,
+    "name": "Logistics Support",
+    "description": "Reliable logistics and delivery solutions worldwide",
+    "icon": "🚚"
+  },
+  {
+    "id": 6,
+    "name": "Technical Consultation",
+    "description": "Expert guidance on product selection and specifications",
+    "icon": "💡"
+  }
+]
