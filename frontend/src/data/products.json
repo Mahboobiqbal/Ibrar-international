@@ -2,61 +2,133 @@
   "rice": [
     {
       "id": 1,
-      "name": "Basmati Rice",
-      "description": "Premium long-grain basmati rice with exceptional aroma and taste",
-      "details": "High-quality basmati rice sourced from the best farms. Perfect for biryanis, pilafs, and everyday cooking.",
-      "image": "/images/basmati-rice.jpg"
+      "category": "rice",
+      "name": "Basmati Rice 1121 STEAM",
+      "description": "Renowned for its long grains and aromatic fragrance.",
+      "details": "High-quality 1121 steam basmati rice sourced from premium farms. Ideal for biryanis, pilafs and special occasions.",
+      "image": "Fehmal rice.png"
     },
     {
       "id": 2,
-      "name": "Sella Rice",
-      "description": "Parboiled sella rice with golden hue and unique cooking properties",
-      "details": "Traditionally processed sella rice that maintains texture during cooking. Ideal for fried rice and risotto.",
-      "image": "/images/sella-rice.jpg"
+      "category": "rice",
+      "name": "White Rice 1121",
+      "description": "Known for its slightly sticky texture and floral aroma.",
+      "details": "Premium white 1121 rice with consistent texture and pleasant aroma, great for everyday meals.",
+      "image": "Fehmal rice.png"
     },
     {
       "id": 3,
-      "name": "Brown Rice",
-      "description": "Nutrient-rich brown rice with wholesome flavor",
-      "details": "Unpolished rice retaining all bran and germ layers. High in fiber and essential nutrients.",
-      "image": "/images/brown-rice.jpg"
+      "category": "rice",
+      "name": "Sella Rice 1121",
+      "description": "Valued for its nutritional benefits and rich flavor.",
+      "details": "Parboiled Sella 1121 rice that retains nutrients during processing and cooks with a firm texture.",
+      "image": "Fehmal rice.png"
     },
     {
       "id": 4,
-      "name": "Long Grain Rice",
-      "description": "Extra-long grain white rice with perfect cooking consistency",
-      "details": "Premium long-grain rice with superior quality. Non-sticky and fluffy texture.",
-      "image": "/images/long-grain-rice.jpg"
+      "category": "rice",
+      "name": "Rice 1509 Steam",
+      "description": "A staple for many households, known for its versatility and ease of cooking.",
+      "details": "1509 steam white rice with reliable cooking results and fluffy texture.",
+      "image": "Fehmal rice.png"
+    },
+    {
+      "id": 5,
+      "category": "rice",
+      "name": "Rice 1509 Sella",
+      "description": "Renowned for its long grains and aromatic fragrance.",
+      "details": "1509 Sella (parboiled) rice offering enhanced nutrition and a slightly firmer bite.",
+      "image": "Fehmal rice.png"
+    },
+    {
+      "id": 6,
+      "category": "rice",
+      "name": "Rice C9 Steam",
+      "description": "Valued for its nutritional benefits and rich flavor.",
+      "details": "C9 steam rice processed to retain nutrients and provide consistent cooking quality.",
+      "image": "Fehmal rice.png"
+    },
+    {
+      "id": 7,
+      "category": "rice",
+      "name": "Rice C9 White",
+      "description": "Known for its slightly sticky texture and floral aroma.",
+      "details": "C9 white rice with pleasant aroma and texture suitable for a variety of cuisines.",
+      "image": "Fehmal rice.png"
+    },
+    {
+      "id": 8,
+      "category": "rice",
+      "name": "Rice Pk 386",
+      "description": "A staple for many households, known for its versatility and ease of cooking.",
+      "details": "PK-386 rice variety offering consistent performance across cooking methods and excellent shelf life.",
+      "image": "Fehmal rice.png"
     }
   ],
   "marbles": [
     {
       "id": 1,
-      "name": "White Marble",
-      "description": "Pure white marble with elegant veining patterns",
-      "details": "Premium white marble sourced from renowned quarries. Perfect for luxury interiors and architectural projects.",
-      "image": "/images/white-marble.jpg"
+      "category": "marbles",
+      "name": "Marble Slabs",
+      "description": "Available in a range of colors, textures, and finishes — ideal for large projects.",
+      "details": "Large-format marble slabs suitable for flooring, feature walls, and architectural installations. Available in polished, honed, and matte finishes.",
+      "image": "Marbels.jpeg"
     },
     {
       "id": 2,
-      "name": "Italian Marble",
-      "description": "Authentic Italian marble with distinctive character",
-      "details": "Imported Italian marble known for durability and timeless beauty. Ideal for premium construction and design.",
-      "image": "/images/italian-marble.jpg"
+      "category": "marbles",
+      "name": "Marble Tiles",
+      "description": "Elegant and durable tiles perfect for floors and walls.",
+      "details": "Precision-cut marble tiles in various sizes and finishes, suitable for residential and commercial applications.",
+      "image": "Marbels.jpeg"
     },
     {
       "id": 3,
-      "name": "Granite",
-      "description": "Durable granite with rich color variations",
-      "details": "High-quality granite resistant to scratching and heat. Available in various colors and finishes.",
-      "image": "/images/granite.jpg"
+      "category": "marbles",
+      "name": "Marble Countertops",
+      "description": "Ideal for kitchens, bathrooms, and luxury spaces.",
+      "details": "Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.",
+      "image": "Marbels.jpg"
     },
     {
       "id": 4,
-      "name": "Onyx Marble",
-      "description": "Luxurious onyx marble with translucent quality",
-      "details": "Premium onyx marble with unique light-transmitting properties. Creates stunning visual effects in design.",
-      "image": "/images/onyx-marble.jpg"
+      "category": "marbles",
+      "name": "Custom Marble Designs",
+      "description": "Tailored marble solutions for unique architectural needs.",
+      "details": "Bespoke marble fabrication and design services, including inlays, mosaics, and custom-cut pieces to match project specifications.",
+      "image": "Marbels.jpeg"
+    },
+    {
+      "id": 5,
+      "category": "marbles",
+      "name": "Stone Cladding",
+      "description": "Elegant stone cladding for interior and exterior applications.",
+      "details": "Natural stone cladding panels and tiles for façades, feature walls, and accents — weather-resistant and long-lasting.",
+      "image": "Marbels.jpeg"
+    },
+    {
+      "id": 6,
+      "category": "marbles",
+      "name": "Landscape Stones",
+      "description": "Natural stone products suitable for gardens and outdoor spaces.",
+      "details": "A range of landscape stones including flagstones, stepping stones, and decorative rock for landscaping projects.",
+      "image": "Marbels.jpeg"
+    },
+    {
+      "id": 7,
+      "category": "marbles",
+      "name": "Unprocessed Marble Block (Raw Marble)",
+      "description": "Raw marble blocks direct from the quarry.",
+      "details": "Unprocessed marble blocks available in various sizes for cutting and fabrication according to project requirements.",
+      "image": "Marbels.jpg"
+    },
+    {
+      "id": 8,
+      "category": "marbles",
+      "name": "Construction Block Services",
+      "description": "Construction-grade marble and stone blocks for building needs.",
+      "details": "Supply and logistics services for construction block deliveries, tailored to large-scale building projects.",
+      "image": "Construction.jpeg"
     }
   ]
 }

@@ -35,4 +35,93 @@
     "description": "Expert guidance on product selection and specifications",
     "icon": "💡"
   }
+  ,
+  {
+    "id": 7,
+    "name": "Kerbstone Installation",
+    "description": "Precise installation of kerbstones for roads, pavements, and landscapes.",
+    "details": [
+      "Precise installation for roads, pavements, and landscapes",
+      "Various materials and designs to suit project requirements",
+      "Expertise for residential and commercial projects"
+    ],
+    "icon": "🧱"
+  },
+  {
+    "id": 8,
+    "name": "Roadside Maintenance",
+    "description": "Maintenance and repair of roadside fixtures to ensure safety and aesthetics.",
+    "details": [
+      "Regular maintenance services",
+      "Repair and replacement of damaged kerbstones and fixtures",
+      "Comprehensive roadside infrastructure solutions"
+    ],
+    "icon": "🛠️"
+  },
+  {
+    "id": 9,
+    "name": "Specialty Construction Services",
+    "description": "Customized and innovative construction solutions tailored to client specifications.",
+    "details": [
+      "Customized solutions tailored to client specifications",
+      "Innovative approaches to improve functionality and appearance",
+      "Eco-friendly options and sustainable practices"
+    ],
+    "icon": "⚙️"
+  },
+  {
+    "id": 10,
+    "name": "Cable Pulling Services",
+    "description": "Expert handling and installation of cables for various applications.",
+    "details": [
+      "Specialized equipment and trained personnel",
+      "Efficient cable management and installation",
+      "Safety-focused operational procedures"
+    ],
+    "icon": "🔌"
+  },
+  {
+    "id": 11,
+    "name": "Steel & Aluminum Fabrication",
+    "description": "Custom fabrication of steel and aluminum structures and architectural elements.",
+    "details": [
+      "Design and production of fencing, gates, and architectural elements",
+      "Precision welding and metalwork services",
+      "Custom structural fabrication to project specs"
+    ],
+    "icon": "🏗️"
+  },
+  {
+    "id": 12,
+    "name": "AC Ducting",
+    "description": "Design, fabrication, and installation of AC ducting systems.",
+    "details": [
+      "Design and engineering for efficient airflow",
+      "Fabrication and installation per industry standards",
+      "Energy-efficient and compliant solutions"
+    ],
+    "icon": "🌬️"
+  },
+  {
+    "id": 13,
+    "name": "Logistics & Equipment Supplies",
+    "description": "Procurement and supply of construction equipment and comprehensive logistics solutions.",
+    "details": [
+      "Procurement and timely delivery of equipment and materials",
+      "Warehousing and inventory management services",
+      "Project-focused logistics and coordination"
+    ],
+    "icon": "🚚"
+  },
+  {
+    "id": 14,
+    "name": "Solar Panel Installation",
+    "description": "Professional solar energy solutions including site assessment, installation, and maintenance.",
+    "details": [
+      "Site assessment and feasibility studies",
+      "Design, engineering, and installation",
+      "Maintenance and performance monitoring"
+    ],
+    "icon": "🔆"
+  }
 ]

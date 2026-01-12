@@ -5,8 +5,9 @@ import ServiceCard from "../components/common/ServiceCard";
 import productsData from "../data/products.json";
 import servicesData from "../data/services.json";
 import fehmalRiceImg from "../../Assets/Fehmal rice.png";
-import marbelsImg from "../../Assets/Marbels.jpg";
+import marbelsImg from "../../Assets/Marbels.jpeg";
 import servicesImg from "../../Assets/Services.jpg";
+import Construction from "../../Assets/Construction.jpeg";
 
 export default function Home() {
   const featuredRice = productsData.rice.slice(0, 3);
@@ -55,7 +56,7 @@ export default function Home() {
                       ? fehmalRiceImg
                       : slide.type === "marbles"
                       ? marbelsImg
-                      : servicesImg
+                      : Construction
                   }
                   alt={slide.label}
                   className="w-full h-full object-cover"
