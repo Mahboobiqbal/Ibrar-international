@@ -22,8 +22,8 @@ export default function About() {
           <h1 className="text-4xl font-bold text-dark mb-6">
             About Ibrar International
           </h1>
-          <div className="bg-gradient-to-r from-primary to-purple-700 text-white rounded-lg p-12">
-            <p className="text-lg leading-relaxed">
+          <div className="bg-gradient-to-br from-primary to-secondary text-white rounded-xl p-12 shadow-lg">
+            <p className="text-lg leading-relaxed font-light">
               Ibrar International is a premium supplier of rice and marble
               products with a commitment to excellence, quality, and customer
               satisfaction. With over 20 years of industry experience, we have
