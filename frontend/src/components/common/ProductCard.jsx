@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // Product card component for displaying products
 export default function ProductCard({ product }) {
   const imageUrl = product.image
-    ? new URL(`../../Assets/${product.image}`, import.meta.url).href
+    ? new URL(`../../../Assets/${product.image}`, import.meta.url).href
     : null;
 
   const productLink = `/product/${product.category || "unknown"}/${product.id}`;

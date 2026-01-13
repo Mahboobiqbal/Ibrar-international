@@ -6,7 +6,7 @@
       "name": "Basmati Rice 1121 STEAM",
       "description": "Renowned for its long grains and aromatic fragrance.",
       "details": "High-quality 1121 steam basmati rice sourced from premium farms. Ideal for biryanis, pilafs and special occasions.",
-      "image": "Fehmal rice.png"
+      "image": "1121-Steam-Basmati-Rice.webp"
     },
     {
       "id": 2,
@@ -14,7 +14,7 @@
       "name": "White Rice 1121",
       "description": "Known for its slightly sticky texture and floral aroma.",
       "details": "Premium white 1121 rice with consistent texture and pleasant aroma, great for everyday meals.",
-      "image": "Fehmal rice.png"
+      "image": "White Rice 1121.webp"
     },
     {
       "id": 3,
@@ -22,7 +22,7 @@
       "name": "Sella Rice 1121",
       "description": "Valued for its nutritional benefits and rich flavor.",
       "details": "Parboiled Sella 1121 rice that retains nutrients during processing and cooks with a firm texture.",
-      "image": "Fehmal rice.png"
+      "image": "Sella Rice 1121 .webp"
     },
     {
       "id": 4,
@@ -30,7 +30,7 @@
       "name": "Rice 1509 Steam",
       "description": "A staple for many households, known for its versatility and ease of cooking.",
       "details": "1509 steam white rice with reliable cooking results and fluffy texture.",
-      "image": "Fehmal rice.png"
+      "image": "Rice 1509 steam.webp"
     },
     {
       "id": 5,
@@ -38,7 +38,7 @@
       "name": "Rice 1509 Sella",
       "description": "Renowned for its long grains and aromatic fragrance.",
       "details": "1509 Sella (parboiled) rice offering enhanced nutrition and a slightly firmer bite.",
-      "image": "Fehmal rice.png"
+      "image": "Rice 1509 Sella.jpeg"
     },
     {
       "id": 6,
@@ -46,7 +46,7 @@
       "name": "Rice C9 Steam",
       "description": "Valued for its nutritional benefits and rich flavor.",
       "details": "C9 steam rice processed to retain nutrients and provide consistent cooking quality.",
-      "image": "Fehmal rice.png"
+      "image": "Rice C9 Steam.jpeg"
     },
     {
       "id": 7,
@@ -54,7 +54,7 @@
       "name": "Rice C9 White",
       "description": "Known for its slightly sticky texture and floral aroma.",
       "details": "C9 white rice with pleasant aroma and texture suitable for a variety of cuisines.",
-      "image": "Fehmal rice.png"
+      "image": "Rice C9 White.jpg"
     },
     {
       "id": 8,
@@ -62,7 +62,7 @@
       "name": "Rice Pk 386",
       "description": "A staple for many households, known for its versatility and ease of cooking.",
       "details": "PK-386 rice variety offering consistent performance across cooking methods and excellent shelf life.",
-      "image": "Fehmal rice.png"
+      "image": "Rice Pk 386.webp"
     }
   ],
   "marbles": [
@@ -72,7 +72,7 @@
       "name": "Marble Slabs",
       "description": "Available in a range of colors, textures, and finishes — ideal for large projects.",
       "details": "Large-format marble slabs suitable for flooring, feature walls, and architectural installations. Available in polished, honed, and matte finishes.",
-      "image": "Marbels.jpeg"
+      "image": "Marble Slabs.jpeg"
     },
     {
       "id": 2,
@@ -80,15 +80,15 @@
       "name": "Marble Tiles",
       "description": "Elegant and durable tiles perfect for floors and walls.",
       "details": "Precision-cut marble tiles in various sizes and finishes, suitable for residential and commercial applications.",
-      "image": "Marbels.jpeg"
+      "image": "Marble Tiles.jpeg"
     },
     {
       "id": 3,
       "category": "marbles",
       "name": "Marble Countertops",
       "description": "Ideal for kitchens, bathrooms, and luxury spaces.",
-      "details": "Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.",
-      "image": "Marbels.jpg"
+      "details": "Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.Durable, stylish marble countertops with edged finishes and pre-sealed options for immediate installation.",
+      "image": "Marble Countertops.jpg"
     },
     {
       "id": 4,
@@ -96,7 +96,7 @@
       "name": "Custom Marble Designs",
       "description": "Tailored marble solutions for unique architectural needs.",
       "details": "Bespoke marble fabrication and design services, including inlays, mosaics, and custom-cut pieces to match project specifications.",
-      "image": "Marbels.jpeg"
+      "image": "Custom Marble Designs.webp"
     },
     {
       "id": 5,
@@ -104,7 +104,7 @@
       "name": "Stone Cladding",
       "description": "Elegant stone cladding for interior and exterior applications.",
       "details": "Natural stone cladding panels and tiles for façades, feature walls, and accents — weather-resistant and long-lasting.",
-      "image": "Marbels.jpeg"
+      "image": "Stone Cladding.jpeg"
     },
     {
       "id": 6,
@@ -112,7 +112,7 @@
       "name": "Landscape Stones",
       "description": "Natural stone products suitable for gardens and outdoor spaces.",
       "details": "A range of landscape stones including flagstones, stepping stones, and decorative rock for landscaping projects.",
-      "image": "Marbels.jpeg"
+      "image": "Landscape Stones.webp"
     },
     {
       "id": 7,
@@ -120,15 +120,8 @@
       "name": "Unprocessed Marble Block (Raw Marble)",
       "description": "Raw marble blocks direct from the quarry.",
       "details": "Unprocessed marble blocks available in various sizes for cutting and fabrication according to project requirements.",
-      "image": "Marbels.jpg"
-    },
-    {
-      "id": 8,
-      "category": "marbles",
-      "name": "Construction Block Services",
-      "description": "Construction-grade marble and stone blocks for building needs.",
-      "details": "Supply and logistics services for construction block deliveries, tailored to large-scale building projects.",
-      "image": "Construction.jpeg"
+      "image": "Un processed marble block.webp"
     }
+    
   ]
 }
