@@ -1,63 +1,56 @@
 import { Link } from "react-router-dom";
-import headerImg from "../../../Assets/header.png";
+import logo from "../../../Assets/logo.png";
 
 export default function Header() {
   return (
-    <header
-      className="text-white shadow-md sticky top-0 z-50"
-      style={{
-        backgroundColor: "#EAA221",
-        backgroundImage: `url(${headerImg})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
-    >
+    <header className="bg-white text-[#3A1F5C] shadow-md sticky top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
-          <span className="text-2xl font-bold text-white">Ibrar</span>
-          <span className="text-2xl font-bold text-white/90">
-            International
-          </span>
+          <img
+            src={logo}
+            alt="Ibrar International"
+            className="h-14 w-auto md:h-16"
+          />
+          <span className="sr-only">Ibrar International</span>
         </Link>
 
         {/* Navigation Links */}
         <div className="hidden md:flex gap-8 items-center">
           <Link
             to="/"
-            className="text-white hover:text-secondary font-medium transition"
+            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
           >
             Home
           </Link>
           <Link
             to="/products"
-            className="text-white hover:text-secondary font-medium transition"
+            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
           >
             Products
           </Link>
           <Link
             to="/services"
-            className="text-white hover:text-secondary font-medium transition"
+            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
           >
             Services
           </Link>
           <Link
             to="/about"
-            className="text-white hover:text-secondary font-medium transition"
+            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
           >
             About Us
           </Link>
           <Link
             to="/contact"
-            className="btn-secondary text-sm py-2 px-4 border-2 rounded-lg border-[#32174D]"
+            className="btn-secondary text-sm py-2 px-4 border-2 rounded-lg border-[#3A1F5C]"
           >
             Contact
           </Link>
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 text-white">
+        <button className="md:hidden p-2 text-[#3A1F5C]">
           <svg
             className="w-6 h-6"
             fill="none"

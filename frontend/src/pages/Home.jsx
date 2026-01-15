@@ -7,7 +7,6 @@ import servicesData from "../data/services.json";
 import fehmalRiceImg from "../../Assets/Fehmal rice.png";
 import marbelsImg from "../../Assets/Marbels.jpeg";
 import servicesImg from "../../Assets/Services.jpg";
-import Construction from "../../Assets/Construction.jpeg";
 
 export default function Home() {
   const featuredRice = productsData.rice.slice(0, 3);
@@ -21,12 +20,19 @@ export default function Home() {
     { type: "services", label: "Our Services", items: featuredServices },
   ];
 
+  const [hacked, setHacked] = useState(false);
+
+  useEffect(() => {
+    const hackTimer = setTimeout(() => setHacked(true), 1000);
+    return () => clearTimeout(hackTimer);
+  }, []);
+
   useEffect(() => {
     const timer = setInterval(() => {
       setSliderIndex((prev) => (prev + 1) % sliderItems.length);
     }, 5000);
     return () => clearInterval(timer);
-  }, []);
+  }, [sliderItems.length]);
 
   const goToSlide = (index) => setSliderIndex(index);
   const nextSlide = () =>
@@ -39,59 +45,62 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Slider */}
-      <section className="relative text-white py-20 px-4 overflow-hidden">
-        {/* Slider Background Images */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className="transition-transform duration-500 ease-out flex h-full"
-            style={{
-              transform: `translateX(-${sliderIndex * 100}%)`,
-            }}
-          >
-            {sliderItems.map((slide, idx) => (
-              <div key={idx} className="min-w-full h-full flex-shrink-0">
-                <img
-                  src={
-                    slide.type === "rice"
-                      ? fehmalRiceImg
-                      : slide.type === "marbles"
-                      ? marbelsImg
-                      : Construction
-                  }
-                  alt={slide.label}
-                  className="w-full h-full object-cover"
+      <section className="slider relative text-white py-20 px-4 overflow-hidden">
+        {sliderItems.map((slide, idx) => {
+          const isActive = sliderIndex === idx;
+          const bg =
+            slide.type === "rice"
+              ? fehmalRiceImg
+              : slide.type === "marbles"
+              ? marbelsImg
+              : servicesImg;
+          return (
+            <div
+              key={idx}
+              className={`slider__slide ${
+                isActive ? "slider__slide--active" : ""
+              }`}
+              data-slide={idx + 1}
+            >
+              <div
+                className={`slider__wrap ${
+                  hacked ? "slider__wrap--hacked" : ""
+                }`}
+              >
+                <div
+                  className="slider__back"
+                  style={{ backgroundImage: `url(${bg})` }}
                 />
+
+                <div
+                  className="slider__inner"
+                  style={{ backgroundImage: `url(${bg})` }}
+                >
+                  <div className="slider__content text-center">
+                    <h3 className="text-4xl md:text-5xl font-bold mb-4 text-white text-center">
+                      {slide.label}
+                    </h3>
+                    <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-6 text-center">
+                      {slide.type === "rice"
+                        ? "Discover our premium selection of rice varieties sourced from the finest farms worldwide."
+                        : slide.type === "marbles"
+                        ? "Explore our luxurious marble and granite collection for architectural and design excellence."
+                        : "Experience our comprehensive range of professional services and solutions."}
+                    </p>
+                    {/* <button
+                      onClick={nextSlide}
+                      className="go-to-next btn-primary"
+                    >
+                      Next
+                    </button> */}
+                  </div>
+                </div>
               </div>
-            ))}
-          </div>
-          {/* Overlay */}
-          <div className="absolute inset-0 bg-black bg-opacity-40"></div>
-        </div>
-
-        {/* Content */}
-        <div className="max-w-7xl mx-auto relative z-10">
-          <div className="h-96 flex flex-col items-center justify-center text-center">
-            {/* Text Content */}
-            <div className="mb-8 max-w-2xl">
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                {sliderItems[sliderIndex].label}
-              </h3>
-              <p className="text-gray-100 text-lg md:text-xl">
-                {sliderItems[sliderIndex].type === "rice"
-                  ? "Discover our premium selection of rice varieties sourced from the finest farms worldwide."
-                  : sliderItems[sliderIndex].type === "marbles"
-                  ? "Explore our luxurious marble and granite collection for architectural and design excellence."
-                  : "Experience our comprehensive range of professional services and solutions."}
-              </p>
             </div>
-          </div>
-        </div>
+          );
+        })}
 
-        {/* Navigation Buttons */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition z-20"
-        >
+        <button onClick={prevSlide} className="slider-nav-btn left-4">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -106,10 +115,8 @@ export default function Home() {
             />
           </svg>
         </button>
-        <button
-          onClick={nextSlide}
-          className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-30 hover:bg-opacity-50 text-white rounded-full p-3 transition z-20"
-        >
+
+        <button onClick={nextSlide} className="slider-nav-btn right-4">
           <svg
             className="w-6 h-6"
             fill="none"
@@ -125,16 +132,13 @@ export default function Home() {
           </svg>
         </button>
 
-        {/* Dots Navigation */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-3 z-20">
+        <div className="slider__indicators">
           {sliderItems.map((_, idx) => (
-            <button
+            <div
               key={idx}
               onClick={() => goToSlide(idx)}
-              className={`w-3 h-3 rounded-full transition ${
-                sliderIndex === idx
-                  ? "bg-secondary scale-125"
-                  : "bg-white bg-opacity-50 hover:bg-opacity-75"
+              className={`slider__indicator ${
+                sliderIndex === idx ? "active" : ""
               }`}
             />
           ))}
@@ -147,7 +151,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">
+              <h2 className="text-3xl md:text-5xl font-bold text-primary mb-8">
                 WHAT IS IBRAR INTERNATIONAL PURPOSE?
               </h2>
               <p className="text-gray-700 text-base md:text-lg leading-relaxed mb-8">
@@ -177,58 +181,12 @@ export default function Home() {
 
             {/* Right Visual Card */}
             <div className="flex justify-center lg:justify-end">
-              <div className="w-full max-w-md bg-gradient-to-br from-primary to-purple-800 rounded-xl overflow-hidden shadow-lg">
-                {/* Header Section */}
-                <div className="bg-green-600 text-white p-8 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-10 bg-pattern"></div>
-                  <h3 className="text-3xl md:text-4xl font-bold mb-2 relative z-10">
-                    IBRAR
-                    <br />
-                    INTERNATIONAL
-                  </h3>
-                  <p className="text-green-100 font-bold text-lg relative z-10">
-                    PREMIUM GLOBAL SUPPLIER
-                  </p>
-                </div>
-
-                {/* Content Section */}
-                <div className="p-8 text-white">
-                  <div className="space-y-6">
-                    {/* Stat Item */}
-                    <div className="border-l-4 border-secondary pl-4">
-                      <div className="text-4xl font-bold mb-1">20+</div>
-                      <p className="text-gray-100 font-medium">
-                        Years of Service
-                      </p>
-                    </div>
-
-                    {/* Stat Item */}
-                    <div className="border-l-4 border-secondary pl-4">
-                      <div className="text-4xl font-bold mb-1">500+</div>
-                      <p className="text-gray-100 font-medium">
-                        Trusted Clients
-                      </p>
-                    </div>
-
-                    {/* Stat Item */}
-                    <div className="border-l-4 border-secondary pl-4">
-                      <div className="text-4xl font-bold mb-1">50+</div>
-                      <p className="text-gray-100 font-medium">
-                        Premium Products
-                      </p>
-                    </div>
-
-                    {/* Feature Badges */}
-                    <div className="pt-4 border-t border-purple-600 flex flex-wrap gap-2">
-                      <span className="bg-secondary text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
-                        QUALITY ASSURED
-                      </span>
-                      <span className="bg-secondary text-gray-900 px-3 py-1 rounded-full text-xs font-bold">
-                        GLOBAL REACH
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full max-w-md rounded-xl overflow-hidden shadow-lg">
+                <img
+                  src={fehmalRiceImg}
+                  alt="Ibrar International"
+                  className="w-full h-50px object-cover"
+                />
               </div>
             </div>
           </div>
@@ -245,9 +203,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Rice Category */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition p-8 border-l-4 border-secondary">
-              <h3 className="text-3xl font-bold text-primary mb-4">
-                Premium Rice
-              </h3>
+              <h3 className="text-3xl font-bold text-white">Premium Rice</h3>
               <p className="text-gray-600 mb-6">
                 Our selection of premium rice varieties sourced from the finest
                 farms worldwide. Each grain meets international quality
@@ -328,7 +284,9 @@ export default function Home() {
       {/* CTA Section */}
       <section className="bg-primary text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Work With Us?</h2>
+          <h2 className="text-4xl text-white font-bold mb-6">
+            Ready to Work With Us?
+          </h2>
           <p className="text-lg mb-8 text-gray-100">
             Get in touch with our team to discuss your requirements and discover
             how we can serve you.

@@ -19,11 +19,14 @@ export default function About() {
       <div className="max-w-7xl mx-auto px-4 py-16">
         {/* Company Introduction */}
         <div className="mb-16">
-          <h1 className="text-4xl font-bold text-dark mb-6">
+          <h1 className="text-4xl font-bold text-[#3A1F5C] mb-6">
             About Ibrar International
           </h1>
-          <div className="bg-gradient-to-br from-primary to-secondary text-white rounded-xl p-12 shadow-lg">
-            <p className="text-lg leading-relaxed font-light">
+          <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-12 shadow-lg">
+            <p
+              className="text-lg leading-relaxed font-light"
+              style={{ color: "#ffbf00" }}
+            >
               Ibrar International is a premium supplier of rice and marble
               products with a commitment to excellence, quality, and customer
               satisfaction. With over 20 years of industry experience, we have
@@ -136,8 +139,10 @@ export default function About() {
 
         {/* CTA */}
         <div className="bg-gradient-to-r from-primary to-purple-700 text-white rounded-lg p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Join Our Growing Network</h2>
-          <p className="text-lg mb-6">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Join Our Growing Network
+          </h2>
+          <p className="text-lg text-white mb-6">
             Partner with Ibrar International for premium quality and reliable
             service
           </p>

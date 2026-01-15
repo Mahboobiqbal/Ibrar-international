@@ -94,7 +94,9 @@ export default function Services() {
 
         {/* CTA */}
         <div className="bg-primary text-white rounded-lg p-12 text-center">
-          <h2 className="text-3xl font-bold mb-4">Ready to Partner With Us?</h2>
+          <h2 className="text-3xl text-white font-bold mb-4">
+            Ready to Partner With Us?
+          </h2>
           <p className="text-lg mb-6 text-gray-100">
             Let's discuss how our services can benefit your business
           </p>
