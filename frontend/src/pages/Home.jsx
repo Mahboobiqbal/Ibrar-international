@@ -4,9 +4,13 @@ import ProductCard from "../components/common/ProductCard";
 import ServiceCard from "../components/common/ServiceCard";
 import productsData from "../data/products.json";
 import servicesData from "../data/services.json";
+import fehmalRiceImg1 from "../../Assets/Fehmall.jpeg";
 import fehmalRiceImg from "../../Assets/Fehmal rice.png";
 import marbelsImg from "../../Assets/Marbels.jpeg";
 import servicesImg from "../../Assets/Services.jpg";
+import heroImage from "../../Assets/Heroimage.png";
+import marbelsHeroImage from "../../Assets/MarbelsHeroimage.jpg";
+import constructionHeroImage from "../../Assets/Constructionheroimage.jpg";
 
 export default function Home() {
   const featuredRice = productsData.rice.slice(0, 3);
@@ -14,6 +18,29 @@ export default function Home() {
   const featuredServices = servicesData.slice(0, 3);
 
   const [sliderIndex, setSliderIndex] = useState(0);
+  const [heroSliderIndex, setHeroSliderIndex] = useState(0);
+
+  const heroSlides = [
+    {
+      image: heroImage,
+      title: "Premium Rice",
+      description:
+        "Discover our premium selection of rice varieties sourced from the finest farms worldwide.",
+    },
+    {
+      image: marbelsHeroImage,
+      title: "Marble & Granite",
+      description:
+        "Explore our luxurious marble and granite collection for architectural and design excellence.",
+    },
+    {
+      image: constructionHeroImage,
+      title: "Construction Materials",
+      description:
+        "High-quality construction materials for your building needs.",
+    },
+  ];
+
   const sliderItems = [
     { type: "rice", label: "Premium Rice", items: featuredRice },
     { type: "marbles", label: "Marble & Granite", items: featuredMarbles },
@@ -28,79 +55,82 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
+    const heroTimer = setInterval(() => {
+      setHeroSliderIndex((prev) => (prev + 1) % heroSlides.length);
+    }, 10000);
+    return () => clearInterval(heroTimer);
+  }, [heroSlides.length]);
+
+  useEffect(() => {
     const timer = setInterval(() => {
       setSliderIndex((prev) => (prev + 1) % sliderItems.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [sliderItems.length]);
 
+  const goToHeroSlide = (index) => setHeroSliderIndex(index);
+  const nextHeroSlide = () =>
+    setHeroSliderIndex((prev) => (prev + 1) % heroSlides.length);
+  const prevHeroSlide = () =>
+    setHeroSliderIndex(
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
+    );
+
   const goToSlide = (index) => setSliderIndex(index);
   const nextSlide = () =>
     setSliderIndex((prev) => (prev + 1) % sliderItems.length);
   const prevSlide = () =>
     setSliderIndex(
-      (prev) => (prev - 1 + sliderItems.length) % sliderItems.length
+      (prev) => (prev - 1 + sliderItems.length) % sliderItems.length,
     );
 
   return (
     <div className="min-h-screen">
       {/* Hero Section with Slider */}
-      <section className="slider relative text-white py-20 px-4 overflow-hidden">
-        {sliderItems.map((slide, idx) => {
-          const isActive = sliderIndex === idx;
-          const bg =
-            slide.type === "rice"
-              ? fehmalRiceImg
-              : slide.type === "marbles"
-              ? marbelsImg
-              : servicesImg;
-          return (
-            <div
-              key={idx}
-              className={`slider__slide ${
-                isActive ? "slider__slide--active" : ""
-              }`}
-              data-slide={idx + 1}
-            >
-              <div
-                className={`slider__wrap ${
-                  hacked ? "slider__wrap--hacked" : ""
-                }`}
+      <section className="relative h-screen flex items-center px-4 overflow-hidden">
+        {/* Background Image Slider */}
+        {heroSlides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
+              heroSliderIndex === idx ? "opacity-100" : "opacity-0"
+            }`}
+            style={{ backgroundImage: `url(${slide.image})` }}
+          />
+        ))}
+
+        {/* Content Container */}
+        <div className="relative max-w-7xl mx-auto w-full">
+          {/* Left Text Content */}
+          <div className="text-white z-10 max-w-2xl">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+              {heroSlides[heroSliderIndex].title}
+            </h1>
+            <p className="text-lg md:text-xl mb-6 leading-relaxed max-w-md">
+              {heroSlides[heroSliderIndex].description}
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <Link
+                to="/products"
+                className="inline-block btn-primary px-8 py-3 font-semibold rounded-lg hover:opacity-90 transition"
               >
-                <div
-                  className="slider__back"
-                  style={{ backgroundImage: `url(${bg})` }}
-                />
-
-                <div
-                  className="slider__inner"
-                  style={{ backgroundImage: `url(${bg})` }}
-                >
-                  <div className="slider__content text-center">
-                    <h3 className="text-4xl md:text-5xl font-bold mb-4 text-white text-center">
-                      {slide.label}
-                    </h3>
-                    <p className="text-white text-lg md:text-xl max-w-2xl mx-auto mb-6 text-center">
-                      {slide.type === "rice"
-                        ? "Discover our premium selection of rice varieties sourced from the finest farms worldwide."
-                        : slide.type === "marbles"
-                        ? "Explore our luxurious marble and granite collection for architectural and design excellence."
-                        : "Experience our comprehensive range of professional services and solutions."}
-                    </p>
-                    {/* <button
-                      onClick={nextSlide}
-                      className="go-to-next btn-primary"
-                    >
-                      Next
-                    </button> */}
-                  </div>
-                </div>
-              </div>
+                Explore Products
+              </Link>
+              <Link
+                to="/contact"
+                className="inline-block btn-secondary px-8 py-3 font-semibold rounded-lg hover:opacity-90 transition"
+              >
+                Get in Touch
+              </Link>
             </div>
-          );
-        })}
+          </div>
+        </div>
 
-        <button onClick={prevSlide} className="slider-nav-btn left-4">
+        {/* Previous Button */}
+        <button
+          onClick={prevHeroSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -116,7 +146,11 @@ export default function Home() {
           </svg>
         </button>
 
-        <button onClick={nextSlide} className="slider-nav-btn right-4">
+        {/* Next Button */}
+        <button
+          onClick={nextHeroSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-white/20 hover:bg-white/40 text-white p-3 rounded-full transition"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -132,13 +166,14 @@ export default function Home() {
           </svg>
         </button>
 
-        <div className="slider__indicators">
-          {sliderItems.map((_, idx) => (
-            <div
+        {/* Indicators */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+          {heroSlides.map((_, idx) => (
+            <button
               key={idx}
-              onClick={() => goToSlide(idx)}
-              className={`slider__indicator ${
-                sliderIndex === idx ? "active" : ""
+              onClick={() => goToHeroSlide(idx)}
+              className={`w-3 h-3 rounded-full transition ${
+                heroSliderIndex === idx ? "bg-white" : "bg-white/50"
               }`}
             />
           ))}
@@ -183,7 +218,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="w-full max-w-md rounded-xl overflow-hidden shadow-lg">
                 <img
-                  src={fehmalRiceImg}
+                  src={fehmalRiceImg1}
                   alt="Ibrar International"
                   className="w-full h-50px object-cover"
                 />

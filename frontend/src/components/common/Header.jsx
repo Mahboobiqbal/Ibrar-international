@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import logo from "../../../Assets/logo.png";
+import logo from "../../../Assets/logo1.png";
 
 export default function Header() {
   return (
-    <header className="bg-white text-[#3A1F5C] shadow-md sticky top-0 z-50">
+    <header className="absolute top-0 left-0 w-full bg-transparent text-[#3A1F5C] z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2">
@@ -19,25 +19,25 @@ export default function Header() {
         <div className="hidden md:flex gap-8 items-center">
           <Link
             to="/"
-            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
+            className="text-white hover:text-[#FFBF00] font-medium transition"
           >
             Home
           </Link>
           <Link
             to="/products"
-            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
+            className="text-white hover:text-[#FFBF00] font-medium transition"
           >
             Products
           </Link>
           <Link
             to="/services"
-            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
+            className="text-white hover:text-[#FFBF00] font-medium transition"
           >
             Services
           </Link>
           <Link
             to="/about"
-            className="text-[#3A1F5C] hover:text-[#FFBF00] font-medium transition"
+            className="text-white hover:text-[#FFBF00] font-medium transition"
           >
             About Us
           </Link>
@@ -50,7 +50,7 @@ export default function Header() {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden p-2 text-[#3A1F5C]">
+        <button className="md:hidden p-2 text-white">
           <svg
             className="w-6 h-6"
             fill="none"
